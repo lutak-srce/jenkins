@@ -8,7 +8,7 @@ class jenkins (
   $java_vendor    = $jenkins::params::java_vendor,
   $java_version   = $jenkins::params::java_version,
   $java_options   = '-Djava.awt.headless=true',
-  $jenkins_args   = '',
+  $args           = '',
 ) inherits jenkins::params {
 
   require ::yum::repo::jenkins
