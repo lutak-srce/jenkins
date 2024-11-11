@@ -13,7 +13,6 @@ class jenkins (
 
   require ::yum::repo::jenkins
   require "java::${java_vendor}${java_version}"
-  require "java::${java_vendor}${java_version}::fonts"
 
   package { 'jenkins':
     ensure  => $package_ensure,
