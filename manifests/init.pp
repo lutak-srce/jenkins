@@ -17,7 +17,7 @@ class jenkins (
   package { 'jenkins':
     ensure  => $package_ensure,
     require => [
-      Package["java-1.${java_version}.0-${java_vendor}-devel"],
+      Class["java::${java_vendor}${java_version}"],
       File['/etc/yum.repos.d/jenkins.repo'],
     ],
   }
